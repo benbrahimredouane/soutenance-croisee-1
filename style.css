@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+     margin:20px;
+     padding: 20px;
+     background-color: brown;
+     border-radius: 20px;
+     
+     
+    
+}
+
+
+.mainsection{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 8px;
+    margin: 20px;
+    
+}
+
+.lesemploi{
+    background-color: rgb(32, 45, 41);
+    position: relative;
+    border-radius: 20px;
+}
+
+.lesplan{  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 1vh;
+    
+
+}
+.plan{
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.btn--div{
+    display: flex;
+    justify-content: center;
+}
+
+.add--btn{
+   
+   padding: 4px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 10px;
+   border:0;
+   background-color: rgb(6, 255, 6);
+   color: white;
+   
+   
+
+}
+
+h3{
+    text-align: center;
+    padding: 5%;
+    font-weight: bold;
+    font-family: monospace;
+    color: antiquewhite;
+
+}
+.space{
+    background-color: blueviolet;
+    height: 37vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px;
+}
+.space:hover{
+    
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+
