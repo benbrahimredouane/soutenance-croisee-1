@@ -41,7 +41,7 @@ addworker.addEventListener("click", (event) => {
   let workers = document.getElementById("workers");
   workers.appendChild(newworker);
  // try to delete the worker
-  let rm__worker = document.querySelector(".btn--delete")
+  let rm__worker = newworker.querySelector(".btn--delete")
   rm__worker.addEventListener("click",()=>{
     newworker.remove();
   });
