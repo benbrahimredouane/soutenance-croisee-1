@@ -10,7 +10,7 @@
 
 <body>
 
-    <main>
+    <main id="main">
         <header>
 
             <h1>Staff Manager</h1>
@@ -19,61 +19,134 @@
 
         <section class="mainsection">
             <div class="lesemploi">
-                <h3> Unassigend </h3>
-                <img src="hj" alt="">
+                <h3> Non assisté </h3>
+                <div id="workers">
+
+                </div>
                 <div class="btn--div">
-                    <button class="add--btn">ajouter une nouvelle employé </button>
+                    <button class="add--btn add__btn--btn" >ajouter une nouvelle employé </button>
                 </div>
 
 
             </div>
             <div>
-                <span class="plan">floor plan</span>
+                <span class="plan">plan d'étage</span>
                 <div class="lesplan">
 
 
                     <div class="space">
                         <h3>meeting</h3>
+                        <div class="zone--work">
+
+                        </div>
+                        <button class="add--btn">ajouter</button>
                     </div>
 
                     <div class="space">
                         <h3>reception</h3>
+                        <div class="zone--work">
+
+                        </div>
+                        <button class="add--btn">ajouter</button>
                     </div>
 
                     <div class="space">
                         <h3>services</h3>
+                        <div class="zone--work">
+
+                        </div>
+                        <button class="add--btn">ajouter</button>
                     </div>
                     <div class="space">
                         <h3>security</h3>
+                        <div class="zone--work">
+
+                        </div>
+                        <button class="add--btn">ajouter</button>
                     </div>
 
                     <div class="space">
                         <h3>staff</h3>
+                        <div class="zone--work">
+
+                        </div>
+                        <button class="add--btn">ajouter</button>
                     </div>
 
                     <div class="space">
+
                         <h3>archives</h3>
+                        <div class="zone--work">
+
+                        </div>
+                        <button class="add--btn">ajouter</button>
                     </div>
 
                 </div>
             </div>
 
         </section>
-
-        <section class="form">
-
-            <label for="">name</label>
-            <input type="text">
-
-            <label for="">profec</label>
-            <input type="text">
+        <section class="container">
+            <form class="form">
 
 
+                <label class="form__label" for="fname" >full name</label>
+                <input class="form__input" type="text" id="fname" required>
+
+                <label class="form__label" for="email" >email</label>
+                <input class="form__input" type="email" id="email" required>
+
+                  <label class="form__label" for="exp" >expériences</label>
+                <input class="form__input" type="text" id="exp" required>
+
+                 <label class="form__label" for="localisation" >localisation actuelle</label>
+                <input class="form__input" type="text" id="localisation" required>
+                
+                 <label class="form__label" for="fnumber" >phone number</label>
+                <input class="form__input" type="text" id="fnumber" required>
 
 
+
+                <label class="form__label" for="plan">le plan d’étage</label>
+                <select name="" id="plan" class="form__input">
+                    <option value="Salle de conférence">Salle de conférence</option>
+                    <option value="Réception">Réception</option>
+                    <option value="Salle des serveurs">Salle des serveurs</option>
+                    <option value="Salle de sécurité">Salle de sécurité</option>
+                    <option value="Salle du personnel">Salle du personnel</option>
+                    <option value="Salle d’archives">Salle d’archives</option>
+                </select>
+
+
+                <label class="form__label" for="link">lien vers l'image</label>
+                <input class="form__input" type="text" id="link">
+
+
+                <div class="form__buttons">
+                    <button class="form__button form__button--submit" id="add--worker">Done</button>
+                    <button class="form__button form__button--cancel">Cancel</button>
+                </div>
+
+
+
+
+
+            </form>
         </section>
 
+
+        <div id="cardinfo">
+          
+            
+
+            
+
+        </div>
+        
+
     </main>
+
+    
 
 
 
