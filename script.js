@@ -1,3 +1,5 @@
+
+
 let form = document.querySelector('.container');
 
 let btn = document.querySelector('.add__btn--btn').addEventListener("click", () => {
@@ -13,18 +15,20 @@ let addworker = document.getElementById("add--worker");
 
 addworker.addEventListener("click", (event) => {
 
-  event.preventDefault();
+    event.preventDefault();
 
-  let fname = document.getElementById('fname').value;
-  let plan = document.getElementById('plan').value;
-  let link = document.getElementById('link').value;
-  let email = document.getElementById('email').value;
-  let fnumber = document.getElementById('fnumber').value;
-  let localisation = document.getElementById('localisation').value;
+    let fname = document.getElementById('fname').value;
+    let plan = document.getElementById('plan').value;
+    let link = document.getElementById('link').value;
+    let email = document.getElementById('email').value;
+    let fnumber = document.getElementById('fnumber').value;
+    let localisation = document.getElementById('localisation').value;
 
-  
-  let newworker = document.createElement("div");
-  newworker.innerHTML = `
+ 
+
+
+    let newworker = document.createElement("div");
+    newworker.innerHTML = `
         <div class="emp">
             <div class="left">
                 <img class="image" src="${link}" alt="photo">  
@@ -38,16 +42,16 @@ addworker.addEventListener("click", (event) => {
   `;
 
 
-  let workers = document.getElementById("workers");
-  workers.appendChild(newworker);
- // try to delete the worker
-  let rm__worker = newworker.querySelector(".btn--delete")
-  rm__worker.addEventListener("click",()=>{
-    newworker.remove();
-  });
-  
-  let workinformation = document.createElement("div");
-  workinformation.innerHTML = `
+    let workers = document.getElementById("workers");
+    workers.appendChild(newworker);
+    
+    let rm__worker = newworker.querySelector(".btn--delete")
+    rm__worker.addEventListener("click", () => {
+        newworker.remove();
+    });
+
+    let workinformation = document.createElement("div");
+    workinformation.innerHTML = `
       <section class="card">
         <div class="card__details">
             <img src="${link}" class="card__image">
@@ -65,25 +69,25 @@ addworker.addEventListener("click", (event) => {
       </section>
   `;
 
-  const cardinfo = document.getElementById("cardinfo");
-  cardinfo.appendChild(workinformation);
+    const cardinfo = document.getElementById("cardinfo");
+    cardinfo.appendChild(workinformation);
 
-  form.style.display = 'none';
+    form.style.display = 'none';
 
 
-  let picture = document.querySelector(".image");
-  picture.addEventListener("click", () => {
-      cardinfo.style.display = "block";
-  });
+    let picture = newworker.querySelector(".image");
+    picture.addEventListener("click", () => {
+        workinformation.querySelector(".card").classList.add("show");
+        cardinfo.style.display = "flex";
+    });
 
-  
-  const Close = workinformation.querySelector(".card__btn");
-  Close.addEventListener("click", () => {
-      cardinfo.style.display = "none";
-    
-  });
+
+    const Close = workinformation.querySelector(".card__btn");
+    Close.addEventListener("click", () => {
+        workinformation.querySelector(".card").classList.remove("show");
+        cardinfo.style.display = "none";
+    });
 
 });
-
 
 
