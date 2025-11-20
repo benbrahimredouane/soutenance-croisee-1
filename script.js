@@ -37,9 +37,14 @@ addworker.addEventListener("click", (event) => {
         </div>
   `;
 
+
   let workers = document.getElementById("workers");
   workers.appendChild(newworker);
-
+ // try to delete the worker
+  let rm__worker = document.querySelector(".btn--delete")
+  rm__worker.addEventListener("click",()=>{
+    newworker.remove();
+  });
   
   let workinformation = document.createElement("div");
   workinformation.innerHTML = `
@@ -64,7 +69,10 @@ addworker.addEventListener("click", (event) => {
   cardinfo.appendChild(workinformation);
 
   form.style.display = 'none';
-  newworker.addEventListener("click", () => {
+
+
+  let picture = document.querySelector(".image");
+  picture.addEventListener("click", () => {
       cardinfo.style.display = "block";
   });
 
