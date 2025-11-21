@@ -24,7 +24,7 @@
 
                 </div>
                 <div class="btn--div">
-                    <button class="add--btn add__btn--btn" >ajouter une nouvelle employé </button>
+                    <button class="add--btn add__btn--btn">ajouter une nouvelle employé </button>
                 </div>
 
 
@@ -33,53 +33,40 @@
                 <span class="plan">plan d'étage</span>
                 <div class="lesplan">
 
-
-                    <div class="space">
+                    <div class="space" data-name="Salle de conférence" data-limit="10">
                         <h3>Salle de conférence</h3>
-                        <div class="zone--work">
-
-                        </div>
-                        <button class="add--btn">ajouter</button>
+                        <div class="zone--work"></div>
+                        <button class="add--existing-btn">+</button>
                     </div>
 
-                    <div class="space">
+                    <div class="space" data-name="Réception" data-limit="2">
                         <h3>Réception</h3>
-                        <div class="zone--work">
-
-                        </div>
-                        <button class="add--btn">ajouter</button>
+                        <div class="zone--work"></div>
+                        <button class="add--existing-btn">+</button>
                     </div>
 
-                    <div class="space">
+                    <div class="space" data-name="Salle des serveurs" data-limit="2">
                         <h3>Salle des serveurs</h3>
-                        <div class="zone--work">
-
-                        </div>
-                        <button class="add--btn">ajouter</button>
+                        <div class="zone--work"></div>
+                        <button class="add--existing-btn">+</button>
                     </div>
-                    <div class="space">
+
+                    <div class="space" data-name="Salle de sécurité" data-limit="3">
                         <h3>Salle de sécurité</h3>
-                        <div class="zone--work">
-
-                        </div>
-                        <button class="add--btn">ajouter</button>
+                        <div class="zone--work"></div>
+                        <button class="add--existing-btn">+</button>
                     </div>
 
-                    <div class="space">
+                    <div class="space" data-name="Salle du personnel" data-limit="20">
                         <h3>Salle du personnel</h3>
-                        <div class="zone--work">
-
-                        </div>
-                        <button class="add--btn">ajouter</button>
+                        <div class="zone--work"></div>
+                        <button class="add--existing-btn">+</button>
                     </div>
 
-                    <div class="space">
-
+                    <div class="space" data-name="Salle d’archives" data-limit="2">
                         <h3>Salle d’archives</h3>
-                        <div class="zone--work">
-
-                        </div>
-                        <button class="add--btn">ajouter</button>
+                        <div class="zone--work"></div>
+                        <button class="add--existing-btn">+</button>
                     </div>
 
                 </div>
@@ -90,25 +77,36 @@
             <form class="form">
 
 
-                <label class="form__label" for="fname" >full name</label>
+                <label class="form__label" for="fname">full name</label>
                 <input class="form__input" type="text" id="fname" required>
 
-                <label class="form__label" for="email" >email</label>
+                <label class="form__label" for="email">email</label>
                 <input class="form__input" type="email" id="email" required>
 
-                  <label class="form__label" for="exp" >expériences</label>
+                <label class="form__label" for="exp">expériences</label>
                 <input class="form__input" type="text" id="exp" required>
 
-                 <label class="form__label" for="localisation" >localisation actuelle</label>
+                <label class="form__label" for="localisation">localisation actuelle</label>
                 <input class="form__input" type="text" id="localisation" required>
-                
-                 <label class="form__label" for="fnumber" >phone number</label>
+
+                <label class="form__label" for="fnumber">phone number</label>
                 <input class="form__input" type="text" id="fnumber" required>
 
 
 
                 <label class="form__label" for="plan">le plan d’étage</label>
-                <select name="" id="plan" class="form__input">
+                <select id="plan" class="form__input" required>
+                    <option value="" disabled selected>Choisir...</option>
+                    <option value="Réceptionnistes">Réceptionnistes</option>
+                    <option value="Techniciens IT">Techniciens IT</option>
+                    <option value="Agents de sécurité">Agents de sécurité</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Nettoyage">Nettoyage</option>
+                    <option value="Autre">Autre</option>
+                </select>
+                <label class="form__label">Assigner à :</label>
+                <select id="initial-room" class="form__input">
+                    <option value="Unassigned">Non assisté (Par défaut)</option>
                     <option value="Salle de conférence">Salle de conférence</option>
                     <option value="Réception">Réception</option>
                     <option value="Salle des serveurs">Salle des serveurs</option>
@@ -116,6 +114,7 @@
                     <option value="Salle du personnel">Salle du personnel</option>
                     <option value="Salle d’archives">Salle d’archives</option>
                 </select>
+
 
 
                 <label class="form__label" for="link">lien vers l'image</label>
@@ -136,17 +135,17 @@
 
 
         <div id="cardinfo">
-          
-            
 
-            
+
+
+
 
         </div>
-        
+
 
     </main>
 
-    
+
 
 
 
