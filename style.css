@@ -64,8 +64,11 @@ header h1 {
     display: flex;
     flex-direction: column;
     gap: 3px;
-
-
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#workers::-webkit-scrollbar{
+    width: 0;
 }
 
 .zone--work {
@@ -109,7 +112,12 @@ header h1 {
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    min-height: 200px;
+    height: 400px;
+    overflow: scroll;
+     overflow-x: hidden;
+}
+.space::-webkit-scrollbar{
+    width: 0;
 }
 
 .space:hover {
@@ -175,21 +183,16 @@ header h1 {
 }
 
 .form {
-
-
     background-color: #495057;
     position: sticky;
     top: 0;
-
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 20px;
+    padding-top: 10px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-
     max-width: 400px;
-
-
     margin: auto;
 }
 
@@ -198,20 +201,20 @@ header h1 {
     font-weight: bold;
     font-size: 1rem;
     color: #DEE2E6;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
 .form__input {
     border-radius: 6px;
     border: 1px solid #CED4DA;
-    padding: 8px;
+    padding: 4px;
     font-size: 1rem;
 
 }
 
 .form__buttons {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     gap: 15px;
@@ -326,6 +329,8 @@ header h1 {
 
 @media (max-width: 600px) {
 
+    #workers {
+    height: 250px;}
     .lesplan {
         grid-template-columns: 1fr;
     }
