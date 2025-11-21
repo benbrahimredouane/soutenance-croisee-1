@@ -125,6 +125,10 @@ header h1 {
     font-size: 1.2rem;
     font-weight: bold;
 }
+.space.alert-empty {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+}
 
 
 .add--btn {
@@ -143,7 +147,17 @@ header h1 {
     background-color: rgb(0, 200, 0);
     transform: translateY(-1px);
 }
-
+.add--existing-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
 
 .container {
 
@@ -409,3 +423,37 @@ header h1 {
   }
 
   
+
+.emp .btns {
+    display: flex;
+    gap: 5px; 
+    align-items: center;
+}
+
+.btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.1s;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.btn--unassign {
+    background-color: #fcd34d; 
+    color: #333;
+}
+.btn--unassign:hover {
+    background-color: #fbbf24;
+}
+
+
+.btn--delete {
+    background-color: #ef4444; 
+    color: white;
+}
+.btn--delete:hover {
+    background-color: #dc2626;
+}
