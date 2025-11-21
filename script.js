@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const workerName = worker.dataset.name;
 
                 if (isAuthorized(workerRole, roomName)) {
-                    if(confirm(`Voulez-vous déplacer ${workerName} (${workerRole}) vers ${roomName} ?`)) {
+                    if (confirm(`Voulez-vous déplacer ${workerName} (${workerRole}) vers ${roomName} ?`)) {
                         workZone.appendChild(worker);
                         foundCandidate = true;
                         updateZoneStatus();
